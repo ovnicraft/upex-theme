@@ -41,6 +41,8 @@
         </ol>
       </nav>
     </div>
+
+    ## div del edx
     <div class="references">
      <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
    </div>
@@ -55,24 +57,32 @@
   <div class="su-container">
     <div class="su-row">
           
-
       ## logo del footer---------------------
       <div id="su-footer-logo" class="span2">
         <a href="http://iaen.edu.ec">
           <img src="${static.url('themes/stanford/images/slogan-iaen.png')}" alt="Universidad de Posgrados del Estado" width="150" height="50"/>
         </a>
-        <script>
-      $(function() {
-        $.ajax({
-          url: "https://cdn.syndication.twimg.com/widgets/timelines/441268959484977153",
-          dataType: "jsonp",
-          success: function(data) {
-            $("#twitter").html($(data.body).find('.e-entry-title'));
-          }
-        });
-      });
-    </script>
+       
+        
+        <div id="titular">
+          Últimas actualizaciones de Twitter
+        </div>
+
+          <div id="twitter">
+            <script>
+              $(function() {
+                $.ajax({
+                  url: "https://cdn.syndication.twimg.com/widgets/timelines/441268959484977153",
+                  dataType: "jsonp",
+                  success: function(data) {
+                  $("#twitter").html($(data.body).find('.e-entry-title'));
+                  }
+                });
+              });
+            </script>
+          </div>  
       </div>
+
       ##-------------------------------------
 
       
@@ -82,12 +92,12 @@
       <div id="su-footer-text" class="span2">
         <ul>
           <li>Dirección:</br></br>
-            Av. Río Amazonas N37 - 271</br></br>
+            Av. Río Amazonas N37-271</br></br>
             y Villalengua esq.,</br></br> 
-            Quito, Ecuador</br></br>
+            Quito - Ecuador</br></br>
             (+593 2) 382-9900</br></br>
             (+593 2) 423 6338</br></br>
-            infoiaen@iaen.edu.ec
+            <a href="#">infoiaen@iaen.edu.ec</a>
           </li>
         </ul>
         ##<ul>
@@ -121,7 +131,9 @@
           </a>
          </div>
          <div id="logo-footer">
+         <a href="#">
         <img src="${static.url('themes/stanford/images/logoUPEx.png')}" alt="UPEx" width="160" height="80"/>
+          </a>
         </div>
       </div>
       ##----------------------------   
