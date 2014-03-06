@@ -38,18 +38,34 @@
   clear: both;
 }
 
-/* Background gradient */
+
+/*-----------------------color de la barra de la cabeza */
 #su-header {
-  background: #8c1515;
+  background: #076f85;
   box-shadow: inset 0 -4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
-  min-height: 30px;
+  min-height: 50px;
+
+background: #3b679e; /* Old browsers */
+background: -moz-linear-gradient(top,  #3b679e 0%, #2b88d9 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3b679e), color-stop(50%,#2b88d9), color-stop(51%,#207cca), color-stop(100%,#7db9e8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#7db9e8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#7db9e8',GradientType=0 ); /* IE6-9 */
+
 }
 
+
+/* ------------------footer colores del footer ---------------------*/
 #su-footer,
 #su-footer .su-container {
-  background: #8c1515;
-  color: #e3dfd5;
-  box-shadow: inset 0 4px 8px -2px rgba(0, 0, 0, 0.2); /* Horizontal offset , vertical offset, blur, internal spacing */
+  background: #333; /* Old browsers */
+  background-image: url("../themes/stanford/images/stanford-pano.png")
+}
+
+#su-footer{
+  height: 400px;
 }
 
 /* Prevent flush left */
@@ -57,13 +73,21 @@
   padding: 4px 0 0 10px;
 }
 
+
+
+/* color del link de footer final*/
 #su-footer a {
-  color: #e3dfd5;
+  color: #fff;
 }
 
+/* color del hover*/
 #su-footer a:hover {
-  text-decoration: underline;
+  border-bottom:5px solid #22558f;
+  /*text-decoration: underline;*/
 }
+
+
+
 
 /* Prevent horizontal scroll bar */
 #su-footer .su-container {
@@ -71,17 +95,27 @@
 }
 
 #su-footer .su-container .su-row {
-  margin: 30px 0 0;
+  margin: 30px auto 0;
 }
 
 /* Align logo and text */
 #su-footer-logo {
-  margin: 0 0 10px;
-  padding: 0;
+  margin-top: 0;
+  background-color: #555;
+  border-radius: 10px;
+  padding: 20px 0 20px 0;
+  margin-right: 10px;
+  height: 253px;
+
 }
 
 #su-footer-text {
   margin-top: 0;
+  background-color: #555;
+  border-radius: 10px;
+  padding: 20px 0 20px 0;
+  margin:0 10px 0 10px;
+  float: right; 
 }
 
 #su-footer-text ul {
@@ -91,19 +125,20 @@
 }
 
 #su-footer-text ul li {
-  display: block;
   list-style: none;
+  color: #fff;
 }
 
 #su-footer-text ul li a {
-  font: 13px 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
+  font: 16px 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
   text-decoration: none;
 }
 
 #su-footer p.copyright {
   font: 11px 'Source Sans Pro','Helvetica Neue',Helvetica,Arial,sans-serif;
   margin: 0;
-  padding: 30px 0 0;
+  text-align: left;
+  padding: 0;
   line-height: 1.5em;
   color: #e3dfd5;
 }
@@ -114,7 +149,7 @@
 
 /* Footer two columns */
 #su-footer .span2 {
-  width: 48%;
+  width: 40%;
   float: left;
 }
 
@@ -164,7 +199,7 @@ Media queries
   }
 
   #su-footer .su-container .su-row {
-    margin:30px 0 0 -20px;
+    margin:30px auto 0 ;
   }
   /* Footer single column */
   #su-footer .span2 {
@@ -242,17 +277,217 @@ Media queries
   }
 
   #su-footer .span2 {
-    width:170px;
+    width:32%;
+    text-align: center;
   }
 
   #su-footer .span10 {
-    width:970px;
+    /*width:700px;*/
+    text-align: center;
+
   }
 
   p.copyright {
     padding-left:16%;
   }
 }
+
+
+
+/* ---------------------colores personalizados--------------------------*/
+header.global .nav-global{
+  margin: 0;
+  padding: 0;
+}
+
+/* ---------------------- color de links de navegacion --------------- */
+header.global .nav-global li a{
+  display:block;
+  padding:5px;
+  color:#22558f;
+  font-weight:600;
+  text-align: center;
+  transition: all 0.5s ease-out;
+ 
+}
+
+/* --- color del hover de la navegacion -------*/
+header.global .nav-global li a:hover,
+header.global .nav-global li a:focus,
+header.global .nav-global li a:active{
+  text-decoration:none;
+  color:#fff;
+  padding: 5px;
+  /*border-bottom:5px solid #22558f;*/
+  background: #008AD0;
+  text-align: center;
+}
+
+/*  ---- color de los links de la barra anterior del footer ---- */
+.wrapper-footer footer .colophon .nav-colophon li a{color:#22558f}
+
+/* color del hover de los links del footer----------------*/
+.wrapper-footer footer .colophon .nav-colophon li a:hover,
+.wrapper-footer footer .colophon .nav-colophon li a:focus,
+.wrapper-footer footer .colophon .nav-colophon li a:active{
+  color:#008AD0;
+  border-bottom:5px solid #22558f;
+  }
+/*----------------------------------------------------------*/
+
+/* ---- color del open edx en la parte inferior -- */
+.wrapper-footer footer a:hover,
+.wrapper-footer footer a:focus,
+.wrapper-footer footer a:active{border-bottom:none;
+  color:#008AD0;
+  border-bottom:5px solid #22558f}
+/*-------------------------------------------------*/
+
+
+/* link del boton de log in ----------------------------------------------------*/
+header.global .nav-courseware li .cta,
+.view-partial-mktgregister .action.action-register,
+.view-partial-mktgregister .action.access-courseware{box-shadow:0 2px 1px 0 none;
+  background:#22558f;
+  color:#f2f1eb;
+  border-radius: 5px;
+}
+
+/* ------------color del hover ----------*/
+header.global .nav-courseware li .cta:hover,
+.view-partial-mktgregister .action.action-register:hover,
+.view-partial-mktgregister .action.access-courseware:hover,
+header.global .nav-courseware li .cta:active,
+.view-partial-mktgregister .action.action-register:active,
+.view-partial-mktgregister .action.access-courseware:active,
+header.global .nav-courseware li .cta:focus,
+.view-partial-mktgregister .action.action-register:focus,
+.view-partial-mktgregister .action.access-courseware:focus{background:#22558f;
+
+background: #3b679e; /* Old browsers */
+background: -moz-linear-gradient(top,  #3b679e 0%, #2b88d9 50%, #207cca 51%, #3b679e 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#3b679e), color-stop(50%,#2b88d9), color-stop(51%,#207cca), color-stop(100%,#3b679e)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#3b679e 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#3b679e 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#3b679e 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #3b679e 0%,#2b88d9 50%,#207cca 51%,#3b679e 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', endColorstr='#3b679e',GradientType=0 ); /* IE6-9 */
+
+}
+/*------------------------------------------------------------------------------*/
+
+/* titular del footer ----contactos----- */
+#su-footer p{
+  color: #fff;
+  font-family: open Sans;
+  text-align: center;
+  padding-top: 20px;
+  font-size: 36px;
+}
+
+
+/* estilo del div redes sociales*/
+#su-footer-redes{
+  padding: 20px 0 20px 0;
+  margin-left: 10px;
+  float:right;
+  text-align: center;
+  background: #555;
+  border-radius: 20px;
+  height: 253px;
+
+}
+
+#su-footer-redes a{
+  padding: 5px;
+}
+
+#su-footer-redes a:hover{
+  padding: 3px;
+  border-bottom:none;
+  transition: all 0.5s ease-out;
+ }
+
+#su-footer-texto{
+text-align: center;
+  padding-bottom: 20px;
+  color: #fff;
+  font-family: open Sans;
+  font-size: 14px;
+}
+
+
+#su-footer-logos{
+  display: flex;
+  text-align: center;
+  margin-left: 110px;
+}
+
+#logo-footer{
+  text-align: center;
+}
+
+/* --------------- div del contenido parte del cuerpo--------*/
+#contenido{
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  background: #eee;
+}
+
+#contenido p{
+  color: #222;
+  font-family: century gothic;
+  text-align: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  font-size: 36px;
+}
+/*----------------------------------------*/
+
+/* --------------- div del contenido parte del cuerpo--------*/
+
+#contenido-interno{
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+  background: #eee;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+#contenido-interno p{
+  color: #222;
+  font-family: century gothic;
+  text-align: center;
+  padding-top: 30px;
+  font-size: 36px;
+}
+/*----------------------------------------*/
+
+#su-footer-fin{
+  text-align: center;
+  background: #444;
+  padding: 20px;
+  color: #aaa;
+  font-family: open Sans;
+  font-size: 14px;
+}
+
+
+
+/*------------------ pag. estaticas */
+.vision{
+  width: 900px;
+  background: #eee;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: 7px 7px 5px 0px rgba(50, 50, 50, 0.25);
+-moz-box-shadow:    7px 7px 5px 0px rgba(50, 50, 50, 0.25);
+box-shadow:         7px 7px 5px 0px rgba(50, 50, 50, 0.25);
+/*----------------------------------*/
+
 
 /*
 Sticky Footer Solution

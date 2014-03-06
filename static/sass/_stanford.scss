@@ -10,18 +10,18 @@
 //-----------------
 
 //Cardinal Color Variables
-$cardinal-red: #8C1515;
-$dark-red: #820000; //Link Color
-$cardinal-light: #c83737; //Selected Header BG Color, ie. calendar        ***Custom, not from palette***
-$cardinal-bg: #e9afaf; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
+$cardinal-red: #22558f;
+$dark-red: #386fae; // COLOR DE LOS LINKS
+$cardinal-light: #008AD0; // COLOR AZUL CLARO Selected Header BG Color, ie. calendar        ***Custom, not from palette***
+$cardinal-bg: #008AD0; //Selected Content BG Color, ie. calendar          ***Custom, not from palette***
 
 //Beige Color Variables
-$beige: #9d9573;
+$beige: #eee;
 $beige-60: lighten($beige, 18.5%); //Main Border/HR Color
 $beige-25: lighten($beige, 25%); 
 
 //Sandstone Color Variables
-$sandstone: #ddcf99;
+$sandstone: #eee; // COLOR DE LOS FONDOS DE LOS CUERPOS
 $sandstone-50: lighten($sandstone, 9%);
 $sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color 
 
@@ -29,7 +29,7 @@ $sandstone-25: lighten($sandstone, 20%); //Important Heading BG Color
 $gray: #3f3c30; //Main Text Color
 $gray-75: lighten($gray, 18.25%); //Lighter Text Color
 
-$gray-3: #e9e6df; //Block/Course BG Color
+$gray-3: #eee; //Block/Course BG Color
 $gray-2: #f2f1eb;
 $gray-1: #fbfbf9; //Main BG Color
 $white: $gray-1;
@@ -61,6 +61,7 @@ $body-bg: $gray-1;
 $container-bg: $gray-1;
 $login-register-bg: $gray-1;
 $content-wrapper-bg: $gray-1;
+
 $header-image: none;
 $header-bg: transparentize(lighten($sandstone, 18.5%), .25);
 $courseware-header-image: none;
@@ -180,16 +181,17 @@ $modal-bg-color: $gray-1;
 $header_image_margin: -77px;
 
 //FOOTER MARGIN
-$footer_margin: ($baseline/4) 0;
+$footer_margin: ($baseline/4) 5;
 
 //-----------------
-//  CSS BG Images
+//  CSS de las imagenes de fondo
 //-----------------
-$homepage-bg-image: '../themes/stanford/images/stanford-pano.jpg';
+$homepage-bg-image: url("../themes/stanford/images/stanford-pano.jpg");
 
 $login-banner-image: none;
 $register-banner-image: none;
 
+// Css del video
 $video-thumb-url: '../themes/stanford/images/stanford-video-thumb.png';
 
 //-----------------
