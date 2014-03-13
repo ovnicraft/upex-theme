@@ -5,148 +5,103 @@
 %>
 <%namespace name='static' file='/static_content.html'/>
 
-## contenido del nuevo cuerpo
-<div id="contenido">
-  <p>Nuestros Servicios</p>
-
-  <div id="contenido-interno">
-        
-        ##<a href="https://www.facebook.com/upexec">
-          <img src="${static.url('themes/stanford/images/diseno.png')}"  alt="UPEx" width="400" height="300" />
-          
-        ##</a>
-        ##<a href="https://twitter.com/upex_ec">
-          <img src="${static.url('themes/stanford/images/multimedia.png')}" alt="upex_ec"width="400" height="300"/>
-        ##</a>
-        ##<a href="https://plus.google.com/u/0/116650887242648660285/posts">
-          <img src="${static.url('themes/stanford/images/virtual.png')}" alt="UPEx" width="400" height="300"/>
-        ##</a>
-  </div>
-</div>
-## ---------------------------------
-
-
-<div class="wrapper-footer">
-  <footer>
-    <div class="colophon">
-      <nav class="nav-colophon">
-        <ol>
-          <li><a href="${reverse('tos')}">Terms of Service</a></li>
-          <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
-          <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
-          <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
-          <li><a href="${reverse('about_edx')}#careers">Careers</a></li>
-          <li><a href="${reverse('about_edx')}#contact">Contact</a></li>
-          <li><a href="${marketing_link('FAQ')}">Help</a></li>
-        </ol>
-      </nav>
-    </div>
-
-    ## div del edx
-    <div class="references">
-     <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
-   </div>
-</footer>
-</div>
 
 ## -----------parte del pie --------------------
-
 <div id="su-footer">
-    <p>Contactos</p>
-  
-  <div class="su-container">
-    <div class="su-row">
-          
-      ## logo del footer---------------------
-      <div id="su-footer-logo" class="span2">
-        <a href="http://iaen.edu.ec">
-          <img src="${static.url('themes/stanford/images/slogan-iaen.png')}" alt="Universidad de Posgrados del Estado" width="150" height="50"/>
-        </a>
-       
-        
-        <div id="titular">
-          Últimas actualizaciones de Twitter
+    <p>Contactos</p> 
+    <div class="su-container">
+        <div class="su-row">
+            ## logo del footer---------------------
+            <div id="su-footer-logo" class="span2">
+                <a href="http://iaen.edu.ec">
+                    <img src="${static.url('themes/stanford/images/slogan-iaen.png')}" alt="Universidad de Posgrados del Estado" width="150" height="50"/>
+                </a>
+                <div id="titular">
+                    Últimas actualizaciones de Twitter
+                </div>
+                <div id="twitter">
+                    <script>
+                        $(function() {
+                        $.ajax({
+                            url: "https://cdn.syndication.twimg.com/widgets/timelines/441268959484977153",
+                            dataType: "jsonp",
+                            success: function(data) {
+                            $("#twitter").html($(data.body).find('.e-entry-title'));
+                                }
+                            });
+                        });
+                    </script>
+                </div>  
+            </div>
+ 
+            ##-------------- navegación footer
+            <div id="su-footer-text" class="span2">
+                <ul>
+                    <li>Dirección:</br></br>
+                        Av. Río Amazonas N37-271</br></br>
+                        y Villalengua esq.,</br></br> 
+                        Quito - Ecuador</br></br>
+                        (+593 2) 382-9900</br></br>
+                        (+593 2) 423 6338</br></br>
+                     <a href="#">E-mail: infoiaen@iaen.edu.ec</a>
+                    </li>
+                </ul>
+                <div class="clear"></div>
+            </div>
+            ##--------------------------------------
+
+            ## redes sociales------------   
+            <div id="su-footer-redes" class="span2">
+                <div id="su-footer-texto">
+                    síguenos en:
+                </div>
+            
+                <div id="su-footer-logos">
+                    <a href="https://www.facebook.com/upexec">
+                        <img src="${static.url('themes/stanford/images/facebook.png')}" alt="UPEx" width="40" height="40"/></a>
+                    <a href="https://twitter.com/upex_ec">
+                        <img src="${static.url('themes/stanford/images/twitter.png')}" alt="upex_ec" width="40" height="40"/></a>
+                    <a href="https://plus.google.com/u/0/116650887242648660285/posts">
+                        <img src="${static.url('themes/stanford/images/google.png')}" alt="UPEx" width="40" height="40"/></a>
+                </div>
+                <div id="logo-footer">
+                    <a href="#">
+                        <img src="${static.url('themes/stanford/images/logoUPEx.png')}" alt="UPEx" width="160" height="80"/>
+                    </a>
+                </div>
+            </div>
+            ##----------------------------   
+            <div style="clear: both;"></div>
         </div>
-
-          <div id="twitter">
-            <script>
-              $(function() {
-                $.ajax({
-                  url: "https://cdn.syndication.twimg.com/widgets/timelines/441268959484977153",
-                  dataType: "jsonp",
-                  success: function(data) {
-                  $("#twitter").html($(data.body).find('.e-entry-title'));
-                  }
-                });
-              });
-            </script>
-          </div>  
-      </div>
-
-      ##-------------------------------------
-
-      
-      
-
-      ##-------------- navegación footer
-      <div id="su-footer-text" class="span2">
-        <ul>
-          <li>Dirección:</br></br>
-            Av. Río Amazonas N37-271</br></br>
-            y Villalengua esq.,</br></br> 
-            Quito - Ecuador</br></br>
-            (+593 2) 382-9900</br></br>
-            (+593 2) 423 6338</br></br>
-            <a href="#">infoiaen@iaen.edu.ec</a>
-          </li>
-        </ul>
-        ##<ul>
-          ##<li class="home"><a href="http://www.iaen.edu.ec">SU Home</a></li>
-          ##<li class="maps alt"><a href="http://visit.stanford.edu/plan/maps.html">Maps &amp; Directions</a></li>
-          ##<li class="search-stanford"><a href="http://www.stanford.edu/search/">Search Stanford</a></li>
-          ##<li class="terms alt"><a href="http://www.stanford.edu/site/terms.html">Terms of Use</a></li>
-          ##<li class="copyright"><a href="http://www.stanford.edu/site/copyright.html">Copyright Complaints</a></li>
-        ##</ul>
-        <div class="clear"></div>
-        
-      </div>
-      ##--------------------------------------
-
-    ## redes sociales------------   
-      <div id="su-footer-redes" class="span2">
-
-      <div id="su-footer-texto">
-        síguenos en:
-      </div>
-        
-        <div id="su-footer-logos">
-          <a href="https://www.facebook.com/upexec">
-          <img src="${static.url('themes/stanford/images/facebook.png')}" alt="UPEx" width="40" height="40"/>
-          </a>
-          <a href="https://twitter.com/upex_ec">
-          <img src="${static.url('themes/stanford/images/twitter.png')}" alt="upex_ec" width="40" height="40"/>
-          </a>
-          <a href="https://plus.google.com/u/0/116650887242648660285/posts">
-          <img src="${static.url('themes/stanford/images/google.png')}" alt="UPEx" width="40" height="40"/>
-          </a>
-         </div>
-         <div id="logo-footer">
-         <a href="#">
-        <img src="${static.url('themes/stanford/images/logoUPEx.png')}" alt="UPEx" width="160" height="80"/>
-          </a>
-        </div>
-      </div>
-      ##----------------------------   
-
-      
-
-      <div style="clear: both;"></div>
     </div>
-  </div>
-  
-  <div id="su-footer-fin">
-    ##<p class="copyright vcard">&copy; <span class="fn org">Developed by: Dpto. de Desarrollo e Innovación tecnológica / Derechos reservados.</span>, <span class="adr"> <span class="locality">Ecuador</span>, <span class="region">Quito</span> <span class="postal-code"></span> </span></p>
-            Copyright © 2014 Developed by: Dpto. de Desarrollo e Innovación tecnológica - IAEN / Derechos reservados.
-      </div>
-</div>
 
+  ## Enlaces a estaticas
+  <div class="wrapper-footer">
+    <footer>
+      <div class="colophon">
+        <nav class="nav-colophon">
+          <ol>
+            <li><a href="${reverse('tos')}">Terms of Service</a></li>
+            <li><a href="${reverse('tos')}#privacy">Privacy Policy</a></li>
+            <li><a href="${reverse('tos')}#honor">Honor Code</a></li>
+            <li><a href="${reverse('tos')}#copyright">Copyright</a></li>
+            <li><a href="${reverse('about_edx')}#careers">Careers</a></li>
+            <li><a href="${reverse('about_edx')}#contact">Contact</a></li>
+            <li><a href="${marketing_link('FAQ')}">Help</a></li>
+          </ol>
+        </nav>
+      </div>
+      ## div del edx
+      <div class="references">
+       <span>Built on <a href="http://code.edx.org">OpenEdX</a>.</span>
+      </div>
+    </footer>
+  </div>
+    ##-----------------------------------
+
+    ## barra final del footer
+    <div id="su-footer-fin">
+      ##<p class="copyright vcard">&copy; <span class="fn org">Developed by: Dpto. de Desarrollo e Innovación tecnológica / Derechos reservados.</span>, <span class="adr"> <span class="locality">Ecuador</span>, <span class="region">Quito</span> <span class="postal-code"></span> </span></p>
+              Copyright © 2014 Developed by: Dpto. de Desarrollo e Innovación Tecnológica - IAEN / Derechos reservados.
+    </div>
+</div>    
