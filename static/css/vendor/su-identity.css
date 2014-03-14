@@ -519,7 +519,27 @@ text-align: center;
 }
 /*----------------------------------*/
 
+.container p.titulo{
+  color: #22558f;
+  font-family: century gothic;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 10px; 
+  font-size: 36px;
+}
 
+.view-register .introduction header .title .title-super,
+.view-login .introduction header .title .title-super,
+.view-passwordreset .introduction header .title .title-super{
+  line-height: 30px;
+  margin: -15px 0 3px 0;
+}
+
+.view-register .introduction header .title .title-sub,
+.view-login .introduction header .title .title-sub,
+.view-passwordreset .introduction header .title .title-sub{
+  margin: 0
+}
 
 
 
