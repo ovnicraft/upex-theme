@@ -61,7 +61,7 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#3b679e', end
 #su-footer,
 #su-footer .su-container {
   background: #333; /* Old browsers */
-  background-image: url("/static/themes/stanford/images/stanford-pano.png")
+  background-image: url("/static/themes/stanford/images/stanford-pano.jpg")
 }
 
 #su-footer{
