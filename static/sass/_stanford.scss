@@ -191,7 +191,7 @@ $login-banner-image: none;
 $register-banner-image: none;
 
 // Css del video
-$video-thumb-url: '/static/stanford/images/stanford-video-thumb.png';
+$video-thumb-url: url('/static/stanford/images/stanford-video-thumb.png');
 
 //-----------------
 //  Mixin Styles
